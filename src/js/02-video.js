@@ -15,18 +15,7 @@ const videoplayerSavedTime = localStorage.getItem("videoplayer-current-time");
 console.log(videoplayerSavedTime);
 
 // Відтворення відео зі збереженної позиції
-player.setCurrentTime(videoplayerSavedTime).then(function(seconds) {
-    // seconds = the actual time that the player seeked to
-}).catch(function(error) {
-    switch (error.name) {
-        case 'RangeError':
-            // the time was less than 0 or greater than the video’s duration
-            break;
+player.setCurrentTime(videoplayerSavedTime)
 
-        default:
-            // some other error occurred
-            break;
-    }
-});
 
 
